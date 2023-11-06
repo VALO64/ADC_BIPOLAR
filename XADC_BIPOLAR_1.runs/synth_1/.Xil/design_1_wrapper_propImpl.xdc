@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:S:/Vivado_Works/XADC_BIPOLAR_3/XADC_BIPOLAR_1.srcs/constrs_1/new/CORA_Z7_MASTER.xdc rfile:../../../XADC_BIPOLAR_1.srcs/constrs_1/new/CORA_Z7_MASTER.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:19 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN D20   IOSTANDARD LVCMOS33 } [get_ports { reset }]; #IO_L4N_T0_35 Sch=btn[0]
+set_property src_info {type:XDC file:1 line:23 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN Y18   IOSTANDARD LVCMOS33 } [get_ports { pwm_out }]; #IO_L17P_T2_34 Sch=ja_p[1]

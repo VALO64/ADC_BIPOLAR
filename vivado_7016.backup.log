@@ -1,0 +1,265 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Mar  8 13:18:46 2023
+# Process ID: 7016
+# Current directory: C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19636 C:\Users\kairo\OneDrive\Documentos\Tec\10mo\FPGA\XADC_BIPOLAR_1\XADC_BIPOLAR_1.xpr
+# Log file: C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/vivado.log
+# Journal file: C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/berny/OneDrive/Escritorio/LOT/TecEnLinea/10mo Semestre/FPGA/U2/XADC_BIPOLAR_1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:15 . Memory (MB): peak = 716.051 ; gain = 97.664
+open_hw
+update_compile_order -fileset sources_1
+close_hw
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 811.566 ; gain = 13.105
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210370AFD0E9A
+open_hw_target: Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1925.363 ; gain = 1113.797
+set_property PROGRAM.FILE {C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z007s_1]
+current_hw_device [get_hw_devices xc7z007s_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1435] Device xc7z007s (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+open_bd_design {C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:xadc_wiz:3.3 - xadc_wiz_0
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_2
+Adding component instance block -- xilinx.com:module_ref:pwm:1.0 - pwm_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:module_ref:compuerta_xor:1.0 - compuerta_xor_0
+Successfully read diagram <design_1> from BD file <C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 2064.977 ; gain = 79.078
+startgroup
+set_property -dict [list CONFIG.DIN_TO {7} CONFIG.DIN_FROM {15} CONFIG.DOUT_WIDTH {9}] [get_bd_cells xlslice_0]
+endgroup
+validate_bd_design
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/dclk_in have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /pwm_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /pwm_0/rst have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	POLARITY=ACTIVE_HIGH 
+regenerate_bd_layout
+open_bd_design {C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/design_1.bd}
+make_wrapper -files [get_files C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/design_1.bd] -top
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:\Users\kairo\OneDrive\Documentos\Tec\10mo\FPGA\XADC_BIPOLAR_1\XADC_BIPOLAR_1.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/compuerta_xor_0/adc'(12) to net 'xlslice_0_Dout'(9) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/synth/design_1.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/compuerta_xor_0/adc'(12) to net 'xlslice_0_Dout'(9) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+update_module_reference design_1_compuerta_xor_0_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/design_1_compuerta_xor_0_0_synth_1
+
+INFO: [IP_Flow 19-3420] Updated design_1_compuerta_xor_0_0 to use current project options
+Wrote  : <C:\Users\kairo\OneDrive\Documentos\Tec\10mo\FPGA\XADC_BIPOLAR_1\XADC_BIPOLAR_1.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+ERROR: [Vivado 12-106] *** Exception: java.lang.reflect.InvocationTargetException (See C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/vivado_pid7016.debug)
+regenerate_bd_layout
+update_module_reference design_1_compuerta_xor_0_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_compuerta_xor_0_0 to use current project options
+WARNING: [IP_Flow 19-4706] Upgraded port 'adc' width 9 differs from original width 12
+WARNING: [IP_Flow 19-4706] Upgraded port 'nadc' width 9 differs from original width 12
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_compuerta_xor_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_compuerta_xor_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <C:\Users\kairo\OneDrive\Documentos\Tec\10mo\FPGA\XADC_BIPOLAR_1\XADC_BIPOLAR_1.srcs\sources_1\bd\design_1\design_1.bd> 
+update_module_reference design_1_compuerta_xor_0_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_compuerta_xor_0_0 to use current project options
+WARNING: [IP_Flow 19-4706] Upgraded port 'adc' width 10 differs from original width 9
+WARNING: [IP_Flow 19-4706] Upgraded port 'nadc' width 10 differs from original width 9
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_compuerta_xor_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_compuerta_xor_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <C:\Users\kairo\OneDrive\Documentos\Tec\10mo\FPGA\XADC_BIPOLAR_1\XADC_BIPOLAR_1.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+update_module_reference design_1_pwm_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/design_1_pwm_0_0_synth_1
+
+INFO: [IP_Flow 19-3420] Updated design_1_pwm_0_0 to use current project options
+WARNING: [IP_Flow 19-4706] Upgraded port 'duty' width 9 differs from original width 12
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_pwm_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_pwm_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <C:\Users\kairo\OneDrive\Documentos\Tec\10mo\FPGA\XADC_BIPOLAR_1\XADC_BIPOLAR_1.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+make_wrapper -files [get_files C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/design_1.bd] -top
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/dclk_in have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /pwm_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+Wrote  : <C:\Users\kairo\OneDrive\Documentos\Tec\10mo\FPGA\XADC_BIPOLAR_1\XADC_BIPOLAR_1.srcs\sources_1\bd\design_1\design_1.bd> 
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/compuerta_xor_0/adc'(10) to net 'xlslice_0_Dout'(9) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/pwm_0/duty'(9) to net 'compuerta_xor_0_nadc'(10) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/synth/design_1.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/compuerta_xor_0/adc'(10) to net 'xlslice_0_Dout'(9) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/pwm_0/duty'(9) to net 'compuerta_xor_0_nadc'(10) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/compuerta_xor_0/adc'(10) to net 'xlslice_0_Dout'(9) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/pwm_0/duty'(9) to net 'compuerta_xor_0_nadc'(10) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/synth/design_1.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/compuerta_xor_0/adc'(10) to net 'xlslice_0_Dout'(9) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/pwm_0/duty'(9) to net 'compuerta_xor_0_nadc'(10) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pwm_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block compuerta_xor_0 .
+Exporting to file C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Mar  8 13:51:52 2023] Launched design_1_pwm_0_0_synth_1, design_1_compuerta_xor_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_pwm_0_0_synth_1: C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/design_1_pwm_0_0_synth_1/runme.log
+design_1_compuerta_xor_0_0_synth_1: C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/design_1_compuerta_xor_0_0_synth_1/runme.log
+synth_1: C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/synth_1/runme.log
+[Wed Mar  8 13:51:52 2023] Launched impl_1...
+Run output will be captured here: C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:25 . Memory (MB): peak = 2809.047 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/synth_1
+
+reset_run design_1_pwm_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/design_1_pwm_0_0_synth_1
+
+reset_run design_1_compuerta_xor_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/design_1_compuerta_xor_0_0_synth_1
+
+update_module_reference design_1_compuerta_xor_0_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_compuerta_xor_0_0 to use current project options
+WARNING: [IP_Flow 19-4706] Upgraded port 'adc' width 9 differs from original width 10
+WARNING: [IP_Flow 19-4706] Upgraded port 'nadc' width 9 differs from original width 10
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_compuerta_xor_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_compuerta_xor_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <C:\Users\kairo\OneDrive\Documentos\Tec\10mo\FPGA\XADC_BIPOLAR_1\XADC_BIPOLAR_1.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+update_module_reference: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 2809.047 ; gain = 0.000
+startgroup
+endgroup
+regenerate_bd_layout
+make_wrapper -files [get_files C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/design_1.bd] -top
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/dclk_in have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /pwm_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+Wrote  : <C:\Users\kairo\OneDrive\Documentos\Tec\10mo\FPGA\XADC_BIPOLAR_1\XADC_BIPOLAR_1.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pwm_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block compuerta_xor_0 .
+Exporting to file C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Mar  8 13:55:29 2023] Launched design_1_pwm_0_0_synth_1, design_1_compuerta_xor_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_pwm_0_0_synth_1: C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/design_1_pwm_0_0_synth_1/runme.log
+design_1_compuerta_xor_0_0_synth_1: C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/design_1_compuerta_xor_0_0_synth_1/runme.log
+synth_1: C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/synth_1/runme.log
+[Wed Mar  8 13:55:29 2023] Launched impl_1...
+Run output will be captured here: C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2809.047 ; gain = 0.000
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 2809.047 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210370AFD0E9A
+set_property PROGRAM.FILE {C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z007s_1]
+current_hw_device [get_hw_devices xc7z007s_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {C:/Users/kairo/OneDrive/Documentos/Tec/10mo/FPGA/XADC_BIPOLAR_1/XADC_BIPOLAR_1.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw

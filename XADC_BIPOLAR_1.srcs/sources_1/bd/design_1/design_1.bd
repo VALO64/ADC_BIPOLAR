@@ -1,0 +1,322 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x6E5C908F2C2B088E",
+      "device": "xc7z007sclg400-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "xadc_wiz_0": "",
+      "clk_wiz_0": "",
+      "xlslice_0": "",
+      "xlconstant_1": "",
+      "xlconstant_2": "",
+      "xlconstant_0": "",
+      "pwm_0": "",
+      "compuerta_xor_0": ""
+    },
+    "ports": {
+      "vn_in_0": {
+        "direction": "I"
+      },
+      "vp_in_0": {
+        "direction": "I"
+      },
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_sys_clock",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000"
+          }
+        }
+      },
+      "pwm_out": {
+        "direction": "O"
+      },
+      "reset": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "xadc_wiz_0": {
+        "vlnv": "xilinx.com:ip:xadc_wiz:3.3",
+        "xci_name": "design_1_xadc_wiz_0_0",
+        "parameters": {
+          "ADC_CONVERSION_RATE": {
+            "value": "52"
+          },
+          "BIPOLAR_OPERATION": {
+            "value": "true"
+          },
+          "ENABLE_RESET": {
+            "value": "true"
+          },
+          "ENABLE_VCCDDRO_ALARM": {
+            "value": "false"
+          },
+          "ENABLE_VCCPAUX_ALARM": {
+            "value": "false"
+          },
+          "ENABLE_VCCPINT_ALARM": {
+            "value": "false"
+          },
+          "INTERFACE_SELECTION": {
+            "value": "ENABLE_DRP"
+          },
+          "OT_ALARM": {
+            "value": "false"
+          },
+          "SINGLE_CHANNEL_SELECTION": {
+            "value": "VP_VN"
+          },
+          "USER_TEMP_ALARM": {
+            "value": "false"
+          },
+          "VCCAUX_ALARM": {
+            "value": "false"
+          },
+          "VCCINT_ALARM": {
+            "value": "false"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "80.0"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "124.615"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "96.948"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "8.000"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "8.000"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "125.000"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          }
+        }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_1_xlslice_0_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "15"
+          },
+          "DIN_TO": {
+            "value": "8"
+          },
+          "DIN_WIDTH": {
+            "value": "16"
+          },
+          "DOUT_WIDTH": {
+            "value": "8"
+          }
+        }
+      },
+      "xlconstant_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_1_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          }
+        }
+      },
+      "xlconstant_2": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_2_0"
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_0_1",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "3"
+          },
+          "CONST_WIDTH": {
+            "value": "7"
+          }
+        }
+      },
+      "pwm_0": {
+        "vlnv": "xilinx.com:module_ref:pwm:1.0",
+        "xci_name": "design_1_pwm_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pwm",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "en": {
+            "direction": "I"
+          },
+          "duty": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "pwm_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "compuerta_xor_0": {
+        "vlnv": "xilinx.com:module_ref:compuerta_xor:1.0",
+        "xci_name": "design_1_compuerta_xor_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "compuerta_xor",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "adc": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "nadc": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "xadc_wiz_0/dclk_in",
+          "pwm_0/clk"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "xadc_wiz_0/daddr_in"
+        ]
+      },
+      "xlconstant_2_dout": {
+        "ports": [
+          "xlconstant_2/dout",
+          "xadc_wiz_0/den_in",
+          "pwm_0/en"
+        ]
+      },
+      "xlconstant_1_dout": {
+        "ports": [
+          "xlconstant_1/dout",
+          "xadc_wiz_0/dwe_in"
+        ]
+      },
+      "xadc_wiz_0_do_out": {
+        "ports": [
+          "xadc_wiz_0/do_out",
+          "xlslice_0/Din"
+        ]
+      },
+      "vn_in_0_1": {
+        "ports": [
+          "vn_in_0",
+          "xadc_wiz_0/vn_in"
+        ]
+      },
+      "vp_in_0_1": {
+        "ports": [
+          "vp_in_0",
+          "xadc_wiz_0/vp_in"
+        ]
+      },
+      "sys_clock_1": {
+        "ports": [
+          "sys_clock",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "pwm_0_pwm_out": {
+        "ports": [
+          "pwm_0/pwm_out",
+          "pwm_out"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "clk_wiz_0/reset",
+          "pwm_0/rst"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "compuerta_xor_0/adc"
+        ]
+      },
+      "compuerta_xor_0_nadc": {
+        "ports": [
+          "compuerta_xor_0/nadc",
+          "pwm_0/duty"
+        ]
+      }
+    }
+  }
+}
